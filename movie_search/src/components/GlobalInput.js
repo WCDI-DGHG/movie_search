@@ -1,8 +1,11 @@
 import { Colors } from '../styles';
 import styled from '@emotion/styled';
 
-const GlobalInput = ({ type = 'text', placeholder = '', ...props }) => {
-  return <StyledInput className="input" type={type} placeholder={placeholder} {...props} />;
+const GlobalInput = ({ type = 'text', size = 'normal', placeholder = '', ...props }) => {
+  const setInputClassName = 'input is-' + size;
+  return (
+    <StyledInput className={setInputClassName} type={type} placeholder={placeholder} {...props} />
+  );
 };
 
 const StyledInput = styled.input`
