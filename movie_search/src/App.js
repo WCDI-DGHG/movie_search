@@ -1,3 +1,5 @@
+import './App.css';
+
 import { HomePage, SearchPage } from './pages';
 import { Route, Routes } from 'react-router-dom';
 
