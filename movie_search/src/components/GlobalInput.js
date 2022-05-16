@@ -10,6 +10,12 @@ const StyledInput = styled.input`
   width: 100%;
   border: 2px solid ${Colors.mainColor};
   border-radius: 8px;
+  :focus {
+    border-color: ${Colors.mainHighlightColor};
+  }
+  :hover {
+    border-color: ${Colors.mainHoverColor};
+  }
 `;
 
 export default GlobalInput;
