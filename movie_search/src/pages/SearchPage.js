@@ -1,4 +1,5 @@
-import { Colors } from '../styles';
+import { Borders, Colors, MediaSize, Shadows } from '../styles';
+
 import GlobalButton from '../components/GlobalButton';
 import GlobalInput from '../components/GlobalInput';
 import styled from '@emotion/styled';
@@ -11,10 +12,10 @@ const SearchPage = () => {
     alert('버튼 클릭');
   };
   return (
-    <div className="container">
+    <div>
       <StyledHero className="hero is-medium">
-        <StyledHeroBody className="hero-body">
-          <StyledForm>
+        <StyledHeroBody className="hero-body column">
+          <StyledForm className="section">
             <p className="title">영화 검색</p>
             <GlobalInput size="large" placeholder="영화 이름 입력" />
             <br />
@@ -29,7 +30,7 @@ const SearchPage = () => {
 };
 
 const StyledHero = styled.section`
-  box-shadow: 11px 15px 8px ${Colors.subColor};
+  box-shadow: ${Shadows.sectionShadow};
 `;
 
 const StyledHeroBody = styled.div`
@@ -40,7 +41,20 @@ const StyledHeroBody = styled.div`
 `;
 
 const StyledForm = styled.form`
-  width: 80%;
+  background-color: #fffff9;
+  border-radius: ${Borders.cardBorder};
+  border: 2px solid ${Colors.subColor};
+  box-shadow: ${Shadows.cardShadow};
+  @media ${MediaSize.mobile} {
+    width: 100%;
+  }
+  @media ${MediaSize.tablet} {
+    width: 80%;
+  }
+  @media ${MediaSize.desktop} {
+    width: 60%;
+    max-width: 1200px;
+  }
 `;
 
 export default SearchPage;
