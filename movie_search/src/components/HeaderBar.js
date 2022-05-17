@@ -1,12 +1,13 @@
+import { Link } from 'react-router-dom';
 import styled from '@emotion/styled';
 
 const HeaderBar = () => {
   return (
     <div>
       <Wrapper>
-        <a className="navbar-item" href="/">
+        <Link className="navbar-item" to="/">
           메인화면 헤더바
-        </a>
+        </Link>
       </Wrapper>
     </div>
   );
