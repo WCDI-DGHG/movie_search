@@ -1,5 +1,6 @@
 import { Borders, Colors, MediaSize, Shadows } from '../styles';
 
+import Card from '../components/Card';
 import GlobalButton from '../components/GlobalButton';
 import GlobalInput from '../components/GlobalInput';
 import styled from '@emotion/styled';
@@ -25,6 +26,7 @@ const SearchPage = () => {
           </StyledForm>
         </StyledHeroBody>
       </StyledHero>
+      <Card />
     </div>
   );
 };
