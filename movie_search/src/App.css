@@ -1,3 +1,24 @@
 html {
   background-color: #fef2ff;
 }
+
+.App {
+  font-family: 'Cafe24SsurroundAir';
+}
+
+.HomePage {
+  font-family: 'Cafe24SsurroundAir';
+}
+
+.SearchPage {
+  font-family: 'Cafe24SsurroundAir';
+}
+
+.GlobalInput {
+  font-family: 'Cafe24SsurroundAir';
+}
+
+@font-face {
+  font-family: 'Cafe24SsurroundAir';
+  src: url('assets/font/Cafe24SsurroundAir.ttf');
+}
