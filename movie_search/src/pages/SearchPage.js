@@ -26,7 +26,13 @@ const SearchPage = () => {
           </StyledForm>
         </StyledHeroBody>
       </StyledHero>
-      <Card />
+      <StyledHero className="hero is-medium">
+        <StyledHeroBody className="hero-body columns is-multiline">
+          <div className="column is-half-mobile is-half-tablet is-2-desktop mt-1">
+            <Card></Card>
+          </div>
+        </StyledHeroBody>
+      </StyledHero>
     </div>
   );
 };

@@ -1,4 +1,7 @@
-import PangImage from '../assets/testImage/abyssinian.jpg';
+// import PangImage from '../assets/testImage/abyssinian.jpg';
+
+import { FontSize, MediaSize, Shadows } from '../styles';
+
 import styled from '@emotion/styled';
 
 const Card = () => {
@@ -21,8 +24,13 @@ const Card = () => {
 
     <div>
       <CardStyle>
-        <Image>
-          <img src={PangImage}></img>
+        <Image className="ho">
+          <figure className="image is-4by5">
+            <img
+              src="https://ssl.pstatic.net/imgmovie/mdi/mit110/0451/D5183-01.jpg"
+              alt="Placeholder image"
+            />
+          </figure>
         </Image>
         <TitleName>냥이의 모험</TitleName>
         <SubTitle>숨막히는 냥이의 모험이 시..</SubTitle>
@@ -39,26 +47,30 @@ export default Card;
 const CardStyle = styled.div`
   border-radius: 20px;
   box-sizing: content-box;
-  width: 230px;
-  height: 350px;
-  padding: 20px;
   background-color: white;
   margin: 10px;
-  padding: 0;
+  box-shadow: ${Shadows.cardShadow};
 `;
 
 const Image = styled.div`
   text-align: center;
-  width: 100%;
-  height: 195px;
   object-fit: cover;
   overflow: hidden;
+  border-radius: 20px 20px 0 0;
 `;
 
 const TitleName = styled.div`
   text-align: center;
   font-weight: 700;
-  font-size: 18px;
+  @media ${MediaSize.mobile} {
+    font-size: ${FontSize.small};
+  }
+  @media ${MediaSize.tablet} {
+    font-size: ${FontSize.large};
+  }
+  @media ${MediaSize.desktop} {
+    font-size: ${FontSize.large};
+  }
 `;
 
 const SubTitle = styled.div`
