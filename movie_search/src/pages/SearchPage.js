@@ -1,5 +1,6 @@
 import { Borders, Colors, MediaSize, Shadows } from '../styles';
 
+import Card from '../components/Card';
 import GlobalButton from '../components/GlobalButton';
 import GlobalInput from '../components/GlobalInput';
 import styled from '@emotion/styled';
@@ -23,6 +24,13 @@ const SearchPage = () => {
               검색하기
             </GlobalButton>
           </StyledForm>
+        </StyledHeroBody>
+      </StyledHero>
+      <StyledHero className="hero is-medium">
+        <StyledHeroBody className="hero-body columns is-multiline">
+          <div className="column is-half-mobile is-half-tablet is-2-desktop mt-1">
+            <Card></Card>
+          </div>
         </StyledHeroBody>
       </StyledHero>
     </div>
