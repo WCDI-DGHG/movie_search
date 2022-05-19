@@ -6,7 +6,9 @@ const HeaderBar = () => {
     <div>
       <Wrapper>
         <Link className="navbar-item" to="/">
-          메인화면 헤더바
+          <div className="container has-text-centered">
+            <p className="title">메인화면 헤더바</p>
+          </div>
         </Link>
       </Wrapper>
     </div>
