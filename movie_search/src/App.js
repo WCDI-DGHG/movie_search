@@ -9,7 +9,7 @@ import SearchDtailPage from './pages/SearchDtailPage';
 function App() {
   return (
     <div className="App">
-      <HeaderBar></HeaderBar>
+      <HeaderBar>헤더바입니다</HeaderBar>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/search" element={<SearchPage />}></Route>

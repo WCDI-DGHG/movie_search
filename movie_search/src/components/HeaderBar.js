@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom';
 import styled from '@emotion/styled';
 
-const HeaderBar = () => {
+const HeaderBar = ({ children }) => {
   return (
     <div>
       <Wrapper>
         <Link className="navbar-item" to="/">
           <div className="container has-text-centered">
-            <p className="title">메인화면 헤더바</p>
+            <p className="title">{children}</p>
           </div>
         </Link>
       </Wrapper>
