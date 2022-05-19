@@ -9,6 +9,7 @@ const GlobalInput = ({ type = 'text', size = 'normal', placeholder = '', ...prop
 };
 
 const StyledInput = styled.input`
+  font-family: 'Cafe24SsurroundAir';
   display: block;
   width: 100%;
   border: 2px solid ${Colors.mainColor};
