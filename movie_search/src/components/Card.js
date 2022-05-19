@@ -1,11 +1,15 @@
-// import PangImage from '../assets/testImage/abyssinian.jpg';
-
 import { FontSize, MediaSize, Shadows } from '../styles';
 
+import PangImage from '../assets/testImage/abyssinian.jpg';
 import styled from '@emotion/styled';
 
-const Card = () => {
-  // const { image, title, director, pubDate, userRating } = props;
+const Card = props => {
+  const { image, title, subtitle, director, pubDate, userRating } = props;
+
+  const starArray = ['☆', '☆', '☆', '☆', '☆'];
+  for (let i = 0; i < userRating / 2; i++) {
+    starArray[i] = '⭐';
+  }
 
   return (
     // <div>
@@ -21,22 +25,22 @@ const Card = () => {
     //     <Grade>{userRating}별점</Grade>
     //   </CardStyle>
     // </div>
+    //⭐⭐⭐
 
     <div>
       <CardStyle>
         <Image className="ho">
           <figure className="image is-4by5">
-            <img
-              src="https://ssl.pstatic.net/imgmovie/mdi/mit110/0451/D5183-01.jpg"
-              alt="Placeholder image"
-            />
+            <img src={image === '' ? PangImage : image} alt="Placeholder image" />
           </figure>
         </Image>
-        <TitleName>냥이의 모험</TitleName>
-        <SubTitle>숨막히는 냥이의 모험이 시..</SubTitle>
-        <Director>감독: 박냥이</Director>
-        <OpeningDate>개봉일: 2022</OpeningDate>
-        <Grade>평점⭐⭐⭐</Grade>
+        <TitleName>
+          {title.replaceAll('<b>', '').replaceAll('</b>', '').substr(0, 9) + '..'}
+        </TitleName>
+        <SubTitle>{subtitle === '' ? '\u00A0' : subtitle.substr(0, 14)}</SubTitle>
+        <Director>감독: {director.split('|')[0]}</Director>
+        <OpeningDate>개봉: {pubDate}</OpeningDate>
+        <Grade>평점: {starArray}</Grade>
       </CardStyle>
     </div>
   );
@@ -50,6 +54,9 @@ const CardStyle = styled.div`
   background-color: white;
   margin: 10px;
   box-shadow: ${Shadows.cardShadow};
+  :hover {
+    box-shadow: ${Shadows.sectionShadow};
+  }
 `;
 
 const Image = styled.div`
