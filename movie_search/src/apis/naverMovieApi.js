@@ -1,6 +1,6 @@
 import { request } from './config';
 
-const onReceiveMovieList = query => {
+export const onReceiveMovieList = query => {
   return request
     .get('', { params: { query } })
     .then(result => {
@@ -10,5 +10,13 @@ const onReceiveMovieList = query => {
       console.log(error);
     });
 };
-
-export default onReceiveMovieList;
+export const onReceiveMovieListWithLength = props => {
+  return request
+    .get('', { params: { query: props.txt, display: props.num } })
+    .then(result => {
+      return result;
+    })
+    .catch(error => {
+      console.log(error);
+    });
+};
