@@ -15,6 +15,7 @@ const GlobalButton = ({ children, size = 'normal', colorType = false, ...props }
 };
 
 const StyledButton = styled.button`
+  font-family: 'Cafe24SsurroundAir';
   width: 100%;
   box-shadow: 0 5px 4px rgba(0, 0, 0, 0.25);
   background-color: ${({ colorType }) => (!colorType ? Colors.mainColor : Colors.subColor)};
